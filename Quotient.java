@@ -23,6 +23,9 @@ public class Quotient {
                 System.out.println("Please enter an integer. Do not enter any text");
                 input.next();
             }
+            catch (Exception e){
+                System.out.println("There might be a problem. Please try again...");
+            }
         }
 
     }
