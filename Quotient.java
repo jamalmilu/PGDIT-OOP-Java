@@ -17,14 +17,17 @@ public class Quotient {
                 System.out.println(number1 + "/" + number2 + " is " + (number1 / number2));
             }
             catch (ArithmeticException arithmeticEx) {
-                System.out.println("Please do not put 0 as the second input");
+                System.out.println("Please do not put 0 as the second input" + arithmeticEx.getMessage());
             }
             catch (InputMismatchException inputMismatchEx){
-                System.out.println("Please enter an integer. Do not enter any text");
+                System.out.println("Please enter an integer. Do not enter any text" + inputMismatchEx.getMessage());
                 input.next();
             }
             catch (Exception e){
-                System.out.println("There might be a problem. Please try again...");
+                System.out.println("There might be a problem. Please try again..." + e.getMessage());
+            }
+            finally {
+                input.close();
             }
         }
 
