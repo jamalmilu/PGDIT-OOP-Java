@@ -1,5 +1,6 @@
 package exceptionHandling;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Quotient {
@@ -17,6 +18,10 @@ public class Quotient {
             }
             catch (ArithmeticException arithmeticEx) {
                 System.out.println("Please do not put 0 as the second input");
+            }
+            catch (InputMismatchException inputMismatchEx){
+                System.out.println("Please enter an integer. Do not enter any text");
+                input.next();
             }
         }
 
